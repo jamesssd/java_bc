@@ -6,7 +6,23 @@ public class SignUp {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Welcome to JavaGram! Let's sign you up.");
+
+        System.out.println("What is your first name?");
+        String firstName = scan.nextLine();
         
+        System.out.println("What is your last name");
+        String lastName = scan.nextLine();
+
+        System.out.println("How old are you?");
+        Integer age = scan.nextInt();
+        scan.nextLine();
+
+        System.out.println("What city do you live in?");
+        String city = scan.nextLine();
+
+        System.out.println("What country do you live in?");
+        String country = scan.nextLine();
+
 
         //Task 1 - Using Scanner, ask the user questions
 
@@ -23,9 +39,13 @@ public class SignUp {
 
 
         //Task 2 - Print their information. 
-
+        System.out.println("Your infomration:");
         System.out.println("Thank you for joining JavaGram!");
-
+        System.out.println("\t\t First Name: " + firstName);
+        System.out.println("\t\t Last Name: " + lastName);
+        System.out.println("\t\t Age: " + age);
+        System.out.println("\t\t City: " + city);
+        System.out.println("\t\t Country: " + country);
         //Print their information like so:
 
         // Your information:

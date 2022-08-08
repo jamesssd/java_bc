@@ -37,7 +37,5 @@ public class Chatbot {
         
         name.close();
         //close scanner. 
-
-        
     }
 }
