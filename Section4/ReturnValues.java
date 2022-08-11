@@ -21,7 +21,7 @@ public class ReturnValues {
         switch(option){
             case "area":
             return len * wid;
-            case "perimeter": return 2*(len + wid)
+            case "perimeter": return 2*(len + wid);
             default: return 404;
         }    
     }
