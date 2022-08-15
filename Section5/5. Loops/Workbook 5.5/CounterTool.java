@@ -5,8 +5,15 @@ public class CounterTool {
         Scanner scan = new Scanner(System.in);
         System.out.println("I hear you like to count by threes\n");
         System.out.println("Jimmy: It depends.");
-        System.out.println("Oh, ok...");
+        System.out.println("Oh, ok...\n");
+        System.out.println("Pick a number to count by:");
+        int inNum = scan.nextInt();
 
+        System.out.println("Pick a number to start counting from:");
+        int startNum = scan.nextInt();
+
+        System.out.println("Pick a number to count to:");
+        int endNum = scan.nextInt();
       /* Task 1 – Get integers from the user.
 
 
@@ -21,7 +28,9 @@ public class CounterTool {
                 
         */
         
-
+        for(int i = startNum; i<=endNum ; i+=inNum){
+          System.out.print(i + " ");
+        }
       /* Task 2 – Create a for loop that:
             1. starts from the second number.
             2. stops at the third number. 

@@ -6,12 +6,21 @@ public class Doubles {
             2. Store the return values in dice1 and dice2.   
 
         */
-        int dice1;
-        int dice2;
+        int dice1 = rollDice();
+        int dice2 = rollDice();
+
+        
 
    //      System.out.println("Dice 1: " + dice1);
    //      System.out.println("Dice 2: " + dice2 + "\n");
+        while(dice1 != dice2){
+            dice1 = rollDice();
+            dice2 = rollDice();
 
+            System.out.println("Dice 1: " + dice1);
+            System.out.println("Dice 2: " + dice2 + "\n");
+        }
+        System.out.println("You rolled doubles!");
         /* Task 3
             1. Set up a loop that keeps running while the two dice aren't the same.
             2. During each run, re-roll the dice and print the two values. 
@@ -27,6 +36,11 @@ public class Doubles {
      * @return randomNumber (int)
      * 
      */
+    public static int rollDice(){
+        double randomNum = Math.random() * 6;
+        int randInt = (int)randomNum;
+        return randInt;
+    }
 
 }
 
