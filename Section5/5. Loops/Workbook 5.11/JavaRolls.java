@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class JavaRolls {
@@ -14,13 +15,13 @@ public class JavaRolls {
     String inPut = scan.nextLine();
 
     int score = 0;
-    while(score != 6){
+    while(true){
       System.out.println("Enter a random value\n");
       int diceRoll = rollDice();
       System.out.println("You rolled " + diceRoll + "\n");
       if(score == 6){
         System.out.println("End of game!");
-        System.exit(0);
+        break;
       } 
       else if(score ==4){
         System.out.println("Zero Points, Keep rolling\n");
@@ -30,10 +31,19 @@ public class JavaRolls {
         System.out.println("One point! Keep rolling!\n");
       }
     }
+
+    System.out.println("\nYour score is: " + score);
+
+    if (score >= 3) {
+      System.out.println("Wow, that's lucky. You win!");
+  } else {
+      System.out.println("Tough luck, you lose :( ");
+  }
+  scan.close();
   }
     public static int rollDice(){
-      double randInt = (Math.random() * 6) + 1;
-      int ranInt = (int)randInt;
-      return ranInt;
+      double randInt = Math.random() * 6;
+      randInt = randInt + 1;
+      return (int)randInt;
     }
   }
