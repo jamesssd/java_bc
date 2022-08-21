@@ -34,10 +34,13 @@ public class Blackjack {
         //Task 6 – Get two random cards for the dealer.
         //       – Print: The dealer shows \n" + <first card> + "\nand has a card facing down \n" + <facedown card>
         //       – Print: \nThe dealer's total is hidden
-        while(true){
-            System.out.println();
-        }
+        String option = hitOrStay();
        
+        while(true){
+            drawRandomCard();
+            total += drawRandomCard();
+            System.out.println("\ncard"); 
+        }
         //Task 8 – Keep asking the player to hit or stay (while loop).
         //       1. Every time the player hits
         //             – draw a new card.
@@ -49,7 +52,7 @@ public class Blackjack {
 
         
         //For tasks 9 to 13, see the article: Blackjack Part II. 
-        scan.close();
+     scan.close();
 
     }
 
@@ -208,15 +211,21 @@ public class Blackjack {
         "  |_____|\n";
     }
     
-    public static String hitOrString(){
-        System.out.println("Hit or stay?");
+    public static String hitOrStay(){
+        System.out.println("Would you like to hit or stay?");
         String move = scan.nextLine();
-
-        if(!move.equals("hit") || !move.equals("stay")){
-            return "Please write hit or stay";
+    
+        while(!(move.equalsIgnoreCase("hit") || move.equalsIgnoreCase("stay"))){
+            System.out.println("Please write hit or stay");
+            move = scan.nextLine();
         }
-        if(move.equals("hit")){}
         return move;
+
+        // if(!move.equals("hit") || !move.equals("stay")){
+        //     return "Please write hit or stay";
+        // }
+        // if(move.equals("hit")){}
+        
     }
     /** Task 7 – make a function that asks the user to hit or stay.
      * Function name – hitOrStay
