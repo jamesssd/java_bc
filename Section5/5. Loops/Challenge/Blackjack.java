@@ -63,12 +63,13 @@ public class Blackjack {
 
             System.out.println("\nDealer gets a\n" + cardString(newDCard));
             System.out.println("Dealer's new total is " + dTotal); 
-
-            if(dTotal > 21){
-                System.out.println("Bust! Dealer lose!");
-                System.exit(0);
-            }
         }
+        
+        if(dTotal > 21){
+            System.out.println("Bust! Dealer lose!");
+            System.exit(0);
+        }
+        
         if(dTotal > total){
             System.out.println("Dealer wins");
         } else{
