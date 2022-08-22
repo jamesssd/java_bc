@@ -34,12 +34,18 @@ public class Blackjack {
         //Task 6 – Get two random cards for the dealer.
         //       – Print: The dealer shows \n" + <first card> + "\nand has a card facing down \n" + <facedown card>
         //       – Print: \nThe dealer's total is hidden
-        String option = hitOrStay();
+        
        
         while(true){
-            drawRandomCard();
-            total += drawRandomCard();
-            System.out.println("\ncard"); 
+            String option = hitOrStay();
+            
+            if(option.equals("stay")){
+                break;
+            }
+            int newCard = drawRandomCard();
+            total += Math.min(newCard, 10);
+            System.out.println("\nYou get a\n" + cardString(newCard));
+            System.out.println("Your new total is " + total); 
         }
         //Task 8 – Keep asking the player to hit or stay (while loop).
         //       1. Every time the player hits
