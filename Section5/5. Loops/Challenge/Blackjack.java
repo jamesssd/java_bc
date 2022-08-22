@@ -46,6 +46,33 @@ public class Blackjack {
             total += Math.min(newCard, 10);
             System.out.println("\nYou get a\n" + cardString(newCard));
             System.out.println("Your new total is " + total); 
+
+            if(total > 21){
+                System.out.println("Bust! You lose!");
+                System.exit(0);
+            }
+            
+        }
+
+        System.out.println("\nDearler's turn");
+        System.out.println("\nThe dealer's cards are \n" + cardString(dCard1) + "\n and a \n" + cardString(dCard2));
+
+        while(dTotal < 17){
+            int newDCard = drawRandomCard();
+            dTotal += Math.min(newDCard, 10);
+
+            System.out.println("\nDealer gets a\n" + cardString(newDCard));
+            System.out.println("Dealer's new total is " + dTotal); 
+
+            if(dTotal > 21){
+                System.out.println("Bust! Dealer lose!");
+                System.exit(0);
+            }
+        }
+        if(dTotal > total){
+            System.out.println("Dealer wins");
+        } else{
+            System.out.println("Player wins!");
         }
         //Task 8 – Keep asking the player to hit or stay (while loop).
         //       1. Every time the player hits
