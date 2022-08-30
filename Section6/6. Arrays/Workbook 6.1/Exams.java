@@ -6,6 +6,18 @@ public class Exams {
 
         //Task 2: Assign each student a seat according to their index in the array.
         //           print: " <student at index 0> ", you will take seat 0. 
+        String[] students = {"Harry", "Neville", "Ron", "Hermione", "Seamus"};
 
+        String seat0 = "Harry"; 
+        String seat1 = "Neville"; 
+        String seat2 = "Ron"; 
+        String seat3 = "Hermione"; 
+        String seat4 = "Seamus"; 
+
+        System.out.println(seat0 + " you will take seat 0.");
+        System.out.println(seat1 + " you will take seat 1.");
+        System.out.println(seat2 + " you will take seat 2.");
+        System.out.println(seat3 + " you will take seat 3.");
+        System.out.println(seat4 + " you will take seat 4.");
     }
 }

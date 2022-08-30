@@ -8,7 +8,21 @@ public class Grocer {
 
              Then, use a for loop to print each element in the array. 
         */
- 
+        String[] aisle = {"apples", "bananas", "candy", "chocolate", "coffee", "tea"};
+
+        Scanner obj = new Scanner(System.in);
+        
+        System.out.println("\nDo you sell coffee");
+        String input = obj.nextLine();
+
+        for(int i = 0; i < aisle.length; i++){
+            if(input.equals(aisle[i])){
+                System.out.println("\nWe have that in aisle: " + aisle[i]);
+                break; 
+            }
+        }
+
+
         /* Task 2:
            1. System.out.println("\nDo you sell coffee?");
 

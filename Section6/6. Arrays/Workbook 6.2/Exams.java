@@ -12,5 +12,11 @@ public class Exams {
          
          */
         //    
+
+        String [] students = {"Malfoy", "Crabbe", "Goyle", "Pansy", "Dean"};
+
+        for(int i = 0; i < students.length; i++){
+            System.out.println(students[i] + "at index " + i + ", you will take seat  " + i);
+        }
     }
 }
