@@ -1,7 +1,21 @@
+import javax.swing.plaf.synth.SynthSplitPaneUI;
+
 public class RingAnnouncer {
     public static void main(String[] args) {
         String[] record = {"WIN", "WIN", "WIN", "LOSS", "WIN", "WIN", "LOSS"};
-
+        int wCount = 0;
+        int lCount = 0;
+        
+        for(int i = 0; i < record.length; i++){
+            if(record[i].equals("WIN")){
+                wCount++;
+            }
+            else{
+                lCount++;
+            }
+        }
+        System.out.println("\nWith a professional record of " + wCount + " Wins  and " + lCount + " losses." 
+         + "\nHe is the pride of oracle: Java Fury!");
         /** Task 1 
          * 
          *   Using a for loop:
