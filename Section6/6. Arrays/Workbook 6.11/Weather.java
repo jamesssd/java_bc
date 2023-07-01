@@ -10,7 +10,14 @@ public class Weather {
         //Task 4, Call printTemperatures for celsius and fahrenheit.
     }
 
+    public double celciusToFahrenheit(double[] celcius){
+        double[] fahrenheit = new double(celcius.length);
 
+        for(int i = 0; i<fahrenheit.length; i++){
+
+        }
+        return fahrenheit;
+    }
     /** Task 1
      * Function name: celciusToFahrenheit. 
      * @param celsius ( double[] )
